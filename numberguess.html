@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container{
+            height: 100%;
+            background-color: #525252;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+          
+        }
+        .box{
+            background-color:gray;
+            padding: 20px 100px;
+            border-radius: 30px;
+
+        }
+         h2{
+            color: aliceblue;
+        }
+        button{
+            background-color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+        }
+        
+        
+        
+         input{
+            padding: 10px 50px;
+            background-color: #525252;
+            border-radius: 5px;
+            text-align: left;
+            color: aliceblue;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Gusee The Number!!!</h2>
+        <input id = "num1" type="number">
+        <button onclick="Gusee()">Guess</button>
+         
+        <p id="won">
+
+        </p>
+
+        </div>
+
+    </div>
+    <script>
+        let rand = Math.floor(Math.random()* 10);
+        function guess(){
+            let input = parseInt(document.getElementById("num1").value);
+
+            //
+            if(input == rand){
+                document.getElementById("won"). innerHTML = "Yupp you won";
+            }
+            else if(input < rand){
+                alert("Guess a Higher Numer");
+            }
+            else{
+                alert("Guess a lower Number");
+            }
+        }
+    </script>
+    
+</body>
+</html>
