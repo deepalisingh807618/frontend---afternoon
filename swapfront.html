@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>swap website</title>
+    </head>
+    <style>
+        body,Html{
+            padding: 0;
+            height: 100%;
+        }
+        .container{
+            background-color: lightskyblue;
+            display: flex;
+            height: 100%;
+            justify-content:center ;
+            align-items: center;
+        }
+        .box{
+            background-color: white;
+            text-align: center;
+            padding: 20px 100px;
+            border-radius: 20px;
+
+        }
+        button{
+            background-color: lightpink;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        button:hover{
+            background-color: white;
+        }
+        
+    </style>
+    <body>
+        <div class="container">
+            <div class ="box" </div>
+            <h2>Swap!!!</h2>
+            Input A: <Input type="number" id="num1"><br><br>
+            Input B: <Input type="number" id="num2"><br><br>
+                <button onclick="Swap()">Swap</button>
+        </div>
+        <div>
+            <script>
+                function swap(){
+                    let a= parent(document.getElementById("num1").value);
+                    let b= parent(document.getElementById("num2").value);
+                    [a,b] = [b,a];
+                    // let temp = a; // array decontruct
+                    // a = b;
+                    //  b = temp;
+                    document.getElementById ("num1").value = a;
+                    document.getElementById("num2").value = b;
+                }
+                </script>
+                </div>
+    </body>
+</html>
